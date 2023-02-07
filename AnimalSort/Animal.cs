@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalSort
 {
-    public class Animal 
+    public class Animal : IComparable<Animal>
     {
         public string Name { get; set; }
         private int _weight;
@@ -28,6 +28,18 @@ namespace AnimalSort
             return $"Name {Name} Weight {Weight}";
         }
 
-
+        public int CompareTo(Animal? other)
+        {
+            if (_weight < other.Weight)
+            {
+                return -1;
+            }
+            else if (_weight > other.Weight)
+            {
+                return 1;
+            }
+            else return 0;
+            //return Name.CompareTo(other.Name);
+        }
     }
 }

@@ -30,6 +30,7 @@ FamilyRelation<Cat> myCatFamily = new FamilyRelation<Cat>(cMy, cFather, cMother)
 myCatFamily.AddChild(cChild1);
 Console.WriteLine(myCatFamily);
 
+//Cat father = myCatFamily.Father;
 
 Fish fMy = new Fish("Haj", 60, 2);
 Fish fpapa = new Fish("PapaHaj", 80, 3);
