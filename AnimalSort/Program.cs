@@ -8,17 +8,17 @@ List<int> integers = new List<int>();
 integers.Add(12);
 integers.Add(13);
 integers.Add(10);
-foreach (int x in integers)
+foreach (int x1 in integers)
 {
-    Console.Write(x + " ");
+    Console.Write(x1 + " ");
 }
 
 Console.WriteLine();
 integers.Sort();
 
-foreach (int x in integers)
+foreach (int x2 in integers)
 {
-    Console.Write(x + " ");
+    Console.Write(x2 + " ");
 }
 Console.WriteLine();
 
@@ -59,3 +59,15 @@ void printOutAnimals(List<Animal> animals)
         Console.WriteLine(anAnimal.ToString());
     }
 }
+
+
+
+Swapper swapper = new Swapper(); 
+int x = 12;
+int y = 21;
+
+Console.WriteLine($"x {x} y {y}");
+swapper.Swap<int>(ref x, ref y);
+//swapper.Swap(ref x, ref y);
+
+Console.WriteLine($"x {x} y {y}");
